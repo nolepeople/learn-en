@@ -8,6 +8,8 @@ class chat(object):
     def __init__(self):
         print ("enter ':q' for exit \n")
         self.bot = ChatBot("My Bot")
+        self.trainer = ct(self.bot)
+        self.trainer.train("chatterbot.corpus.english")
         print("")
 
         while True:
