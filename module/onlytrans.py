@@ -12,4 +12,6 @@ class gotrans(object):
               self.msg = input(f"{self.prefix[0]}")
               exit() if self.msg == ":q" else True
               self.resp = tt().translate(text=self.msg,dest='id')
+              if self.resp.src == "id":
+                 self.resp = tt().translate(text=self.msg,dest='en')
               print (f"{self.prefix[1]}{self.col[0]}{self.resp.text}{self.col[1]}")
